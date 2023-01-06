@@ -1,0 +1,15 @@
+@import "./styles/_font-faces";
+@import "./styles/_mixins";
+@import "./styles/_variables";
+
+.App {
+    margin: 0;
+    padding: 0;
+
+    .sidebar {
+
+        ul {
+            list-style: none;
+        }
+    }
+}

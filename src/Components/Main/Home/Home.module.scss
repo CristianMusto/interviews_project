@@ -1,0 +1,16 @@
+@import "../../../styles/_font-faces";
+@import "../../../styles/_mixins";
+@import "../../../styles/_variables";
+
+.home {
+    width: 100%;
+    margin-right: 0;
+    margin-left: auto;
+    height: $fullHeight;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}

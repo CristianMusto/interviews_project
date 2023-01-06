@@ -1,0 +1,25 @@
+@import "../../styles/_font-faces";
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10%;
+    z-index: 999;
+
+    .voicesList {
+        margin: 0;
+        padding-left: 1.5rem;
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(#{$fullHeight} - 30px);
+
+        li {
+            width: 100%;
+        }
+    }
+}
