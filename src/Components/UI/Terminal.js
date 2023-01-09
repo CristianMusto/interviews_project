@@ -1,33 +1,53 @@
 import Terminal from 'react-animated-term';
 import "./Terminal.scss"
 
-const TerminalComp = () => {
+//const  spinner  =  [ '⠋' ,  '⠙' ,  '⠹' ,  '⠸' ,  '⠼' ,  '⠴' ,  '⠦' ,  '⠧ ' ,  '⠇' ,  '⠏' ]
 
-    const termLines = [
-        {
-          'text': 'cd Exploite_Interviews',
-          'cmd': true
-        },
-        {
-          'text': 'hfdjasdhflakjdhslafjkhd',
-          'cmd': false
-        },
-        {
-          'text': 'cd more',
-          'cmd': true
-        },
-        {
-            'text': 'fahsdfhadkfjhadslkfjad',
-            'cmd': false
-        }
-      ]
-
-    return (
-        <Terminal
-            lines={termLines}
-            interval={100}
-        />
-    )
+const CurrentDate = () => {
+  const date = new Date();
+  return date.toLocaleDateString('it-IT', {
+    year: 'numeric',
+    month: 'short',
+    weekday: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+  });
 }
 
-export default TerminalComp
+
+const TerminalComp = () => {
+  const dateString = CurrentDate();
+  const termLines = [
+    {
+      'text': `login: ${dateString}`,
+      'cmd': false
+    },
+    {
+      'text': 'cd Exploite_Interviews',
+      'cmd': true 
+    },
+    {
+      'text': 'hfdjasdhflakjdhslafjkhd',
+      'cmd': false
+    },
+    {
+      'text': 'cd more',
+      'cmd': true
+    },
+    {
+        'text': 'fahsdfhadkfjhadslkfjad',
+        'cmd': false
+    }
+  ]
+
+  return (
+      <Terminal
+        lines={termLines}
+        interval={100}
+      />
+  )
+}
+
+export default TerminalComp;
