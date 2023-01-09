@@ -1,6 +1,31 @@
 import styles from "./MenuBar.module.scss"
+import { useState, useEffect } from 'react';
 
 const MenuBar = () => {
+    const [time, setTime] = useState(new Date());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTime(new Date());
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    const options = { hour: '2-digit', minute: '2-digit' };
+    const timeString = time.toLocaleTimeString('it-IT', options);
+
+    const CurrentDate = () => {
+        const date = new Date();
+        return date.toLocaleDateString('it-IT', {
+            weekday: 'short',
+            day: 'numeric',
+            month: 'short',
+        });
+    }
+
+    
+
     return (
         <div className={styles.menubar}>
             <ul className={styles.listMenuSx}>
@@ -13,9 +38,9 @@ const MenuBar = () => {
                 <li>Aiuto</li>
             </ul>
             <ul className={styles.listMenuDx}>
-                <li>🍎</li>
-                <li><b>Terminale</b></li>
-                <li>Shell</li>
+                <li>✨</li>
+                <li>{CurrentDate()}</li>
+                <li>{timeString}</li>
             </ul>
         </div>
     )

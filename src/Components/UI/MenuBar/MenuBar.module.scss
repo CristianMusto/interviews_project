@@ -46,11 +46,11 @@
         padding-right: 1.5rem;
 
         li {
-            padding: 0 1rem;
+            padding: 0 0.75rem;
         }
 
-        li:nth-child(3) {
-            padding-right: 0;
+        li:nth-child(3), li:nth-child(1) {
+            padding: 0;
         }
     }
 }
