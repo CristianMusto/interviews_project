@@ -1,8 +1,6 @@
 import Terminal from 'react-animated-term';
 import "./Terminal.scss"
 
-//const  spinner  =  [ '⠋' ,  '⠙' ,  '⠹' ,  '⠸' ,  '⠼' ,  '⠴' ,  '⠦' ,  '⠧ ' ,  '⠇' ,  '⠏' ]
-
 const CurrentDate = () => {
   const date = new Date();
   return date.toLocaleDateString('it-IT', {
@@ -16,21 +14,33 @@ const CurrentDate = () => {
   });
 }
 
-
 const TerminalComp = () => {
   const dateString = CurrentDate();
+  const spinner = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
   const termLines = [
     {
       'text': `login: ${dateString}`,
       'cmd': false
     },
     {
-      'text': 'cd Exploite_Interviews',
+      'text': 'cd desktop/professional_growth/Exploite_Interviews',
       'cmd': true 
     },
     {
-      'text': 'hfdjasdhflakjdhslafjkhd',
+      'text': 'open ',
       'cmd': false
+    },
+    {
+      text: '✔ Loaded course',
+      cmd: false,
+      repeat: true,
+      repeatCount: 5,
+      frames: spinner.map(function (spinner) {
+        return {
+          text: spinner + ' Loading app',
+          delay: 40
+        }
+      })
     },
     {
       'text': 'cd more',
@@ -41,12 +51,12 @@ const TerminalComp = () => {
         'cmd': false
     }
   ]
-
+  
   return (
-      <Terminal
-        lines={termLines}
-        interval={100}
-      />
+    <Terminal
+      lines={termLines}
+      interval={80}
+    />
   )
 }
 
