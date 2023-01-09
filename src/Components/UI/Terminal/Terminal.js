@@ -34,7 +34,7 @@ const TerminalComp = () => {
       frames: spinner.map(function (spinner) {
         return {
           text: spinner + ' Loading course',
-          delay: 40
+          delay: 30
         }
       })
     },
@@ -43,7 +43,7 @@ const TerminalComp = () => {
       'cmd': true
     },
     {
-        'text': 'fahsdfhadkfjhadslkfjad',
+        'text': 'DAJE!',
         'cmd': false
     }
   ]
