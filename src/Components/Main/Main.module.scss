@@ -1,5 +1,13 @@
+@import "../../styles/_font-faces";
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+
 .main {
     background-image: url("../../../public/img/mac.webp");
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    top: 0;
+    left: 0;
 }
+

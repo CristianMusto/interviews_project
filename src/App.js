@@ -11,7 +11,11 @@ function App() {
   }
 
   useEffect(() =>{
-    handleVH()
+    handleVH();
+
+    window.addEventListener("resize", () => {
+      handleVH();
+    })
   })
 
   return (
