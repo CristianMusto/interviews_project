@@ -1,4 +1,4 @@
-import TerminalComp from "../../UI/Terminal"
+import TerminalComp from "../../UI/Terminal/Terminal"
 import styles from "./Home.module.scss"
 
 const Home = props => {
