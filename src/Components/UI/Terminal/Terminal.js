@@ -23,12 +23,8 @@ const TerminalComp = () => {
       'cmd': false
     },
     {
-      'text': 'cd desktop/professional_growth/Exploite_Interviews',
+      'text': 'cd desktop/professional_growth/Exploit_Interviews',
       'cmd': true 
-    },
-    {
-      'text': 'open ',
-      'cmd': false
     },
     {
       text: '✔ Loaded course',
@@ -37,7 +33,7 @@ const TerminalComp = () => {
       repeatCount: 5,
       frames: spinner.map(function (spinner) {
         return {
-          text: spinner + ' Loading app',
+          text: spinner + ' Loading course',
           delay: 40
         }
       })
