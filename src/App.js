@@ -1,7 +1,7 @@
 import './App.scss';
-import Header from './Components/Header/Header';
 import { useEffect } from 'react';
 import Main from './Components/Main/Main';
+import MenuBar from './Components/MenuBar/MenuBar'
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header className="sidebar"/>
+      <MenuBar />
       <Main />
     </div>
   );

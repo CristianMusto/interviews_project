@@ -30,12 +30,11 @@ const MenuBar = () => {
         <div className={styles.menubar}>
             <ul className={styles.listMenuSx}>
                 <li>🍎</li>
-                <li><b>Terminale</b></li>
-                <li>Shell</li>
-                <li>Modifica</li>
-                <li>Vista</li>
-                <li>Finestra</li>
-                <li>Aiuto</li>
+                <li><b>Home</b></li>
+                <li>Chi siamo</li>
+                <li>Corsi</li>
+                <li>Domande frequanti</li>
+                <li>Contatti</li>
             </ul>
             <ul className={styles.listMenuDx}>
                 <li>✨</li>
