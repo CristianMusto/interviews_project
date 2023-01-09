@@ -13,7 +13,7 @@ const Header = props => {
         </aside>
 
         
-    )
+    ) 
 }
 
 export default Header
