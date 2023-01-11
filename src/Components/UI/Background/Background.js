@@ -45,10 +45,10 @@ const Mountain = ({index, hue: _hue}) => {
     );
 }
 
-const Background = () => {
+const Background = (props) => {
     
     return (
-        <div className="background">
+        <div className={`${"background"} ${props.className}`}>
         <svg className='mountains' viewBox='0 0 1000 1000' preserveAspectRatio='none'>
             <path fill={`hsl(227deg,90%,50%)`} d='M0,0 L1000,0 L1000,1000 L0,1000 z'/>
             {[...new Array(LAYERS)].map((_, i) => (

@@ -8,8 +8,7 @@
     width: 100%;
     height: $fullHeight;
     background-color: $black;
-
-    animation: fadeOut 1s linear forwards;
+    animation: fadeOut 0.75s linear forwards;
     animation-delay: 3.5s;
 
     @keyframes fadeOut {
@@ -18,11 +17,31 @@
     }
 }
 
+.blurBG {
+    filter: blur(10px);
+}
+
 .loader-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    .logo {
+        max-width: 150px;
+        max-height: 150px;
+        width: 100%;
+        border: 1px solid #232323;
+        background-color: #232323;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 }
 
 *, *:before, *:after {
@@ -32,12 +51,6 @@
 	padding: 0;
 }
 
-.logo {
-	display: block;
-	width: 50%;
-	height: 50%;
-    margin: 0 auto 2.5rem;
-}
 .update-bar {
 	background-color: rgba(255,255,255,0.1);
 	border-radius: 0.25em;
