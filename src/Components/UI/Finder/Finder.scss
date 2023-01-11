@@ -1,13 +1,13 @@
 @import "../../../styles/_font-faces";
 
 .window {
-    background-color: rgba($color: #232323, $alpha: 0.95);
+    background-color: rgba($color: #232323, $alpha: 0.90);
     width: 55%;
     height: 60%;
-    // position: fixed;
-    // top: 35%;
-    // left: 42.5%;
-    position: relative;
+    position: fixed;
+    top: 35%;
+    left: 42.5%;
+    // position: relative;
     z-index: 10;
     margin: 0 auto;
     border: 1px solid #505156;
@@ -70,7 +70,6 @@
             .docs {
                 font-family: "myriadBold";
                 background-color: orange;
-                padding-bottom: 10px;
                 color: black;
                 width: 100% !important;
             }
@@ -120,7 +119,7 @@
         position: absolute;
         top: 0;
         left: 13.8%;
-        background-color: rgba($color: #28292B, $alpha: 0.95);
+        background-color: rgba($color: #28292B, $alpha: 0.90);
         margin: 0;
         padding: 0;
         border-bottom: 1px solid rgb(27, 27, 27);
@@ -183,11 +182,11 @@
 
     .contentW, .contentC, .contentF{
         width: 26.2%;
-        height: 90%;
+        height: 87.5%;
         margin-right: 0;
         margin-left: auto;
         position: absolute;
-        top: 10%;
+        top: 12.5%;
         left: 40%;
         display: none;
         border-right: 1px solid rgb(27, 27, 27);
