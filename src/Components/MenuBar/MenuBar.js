@@ -1,6 +1,7 @@
 import styles from "./MenuBar.module.scss"
 import { useState, useEffect } from 'react';
 import { Link } from "react-scroll";
+import Logo from "../../Images/Logo.png";
 
 const MenuBar = () => {
     const [time, setTime] = useState(new Date());
@@ -30,7 +31,7 @@ const MenuBar = () => {
     return (
         <div className={styles.menubar}>
             <ul className={styles.listMenuSx}>
-                <li>🍎</li>
+                <li className={styles.logo}><img src={Logo} alt="logo"/></li>
                 <li>
                     <Link 
                     to="Home"
