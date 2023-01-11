@@ -76,11 +76,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding-right: 0.75rem;
     
             .controlCenter {
-            -webkit-filter: invert(100%);
-            filter: invert(100%);
-            transform: scale(0.015);
+                -webkit-filter: invert(100%);
+                filter: invert(100%);
+                transform: scale(0.015);
             }
         }
     }

@@ -4,6 +4,7 @@
 
 * {
     font-family: "myriad";
+    @include fluid-type(14, 18, 200, 1920);
 }
 
 .App {
