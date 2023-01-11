@@ -1,0 +1,193 @@
+.window {
+    background-color: rgba($color: #232323, $alpha: 0.95);
+    width: 55%;
+    height: 60%;
+    position: fixed;
+    top: 35%;
+    left: 42.5%;
+    // position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    border: 1px solid #505156;
+    border-radius: 10px;
+
+    .sidebar {
+
+        height: 100%;
+        width: 13.75%;
+        border-right: 1px solid rgb(27, 27, 27);
+
+        .dots {
+            margin: 0;
+
+            li {
+                display: inline-block;
+                position: absolute;
+                border-radius: 50%;
+                width: 12px;
+                height: 12px;
+                top: 5%;
+                transform: translateY(-50%);
+            }
+
+            li.close {
+                background-color: #FF5F56;
+                left: 13px;
+            }
+
+            li.min {
+                background-color: #FFBE2D;
+                left: 33px;
+            }
+
+            li.expand {
+                background-color: #25C940;
+                left: 53px;
+            }
+        }
+
+        .sidebarFav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            list-style: none;
+            margin: 0;
+            padding: 50px 0px 20px 13px;
+            
+
+            li{
+                cursor: default;
+            }
+
+            .fav {
+                color: orange;
+            }
+
+            li:not(.fav) {
+                padding-left: 10px;
+                padding-top: 10px;
+            }
+
+            .docs {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+
+        .device {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            list-style: none;
+            margin: 0;
+            padding: 50px 0px 20px 13px;
+            height: 25.75%;
+
+            li{
+                cursor: default;
+            }
+
+            .dev {
+                color: orange;
+            }
+
+            li:not(.dev) {
+                padding-left: 10px;
+                padding-top: 10px;
+            }
+        }
+    }
+
+    .header {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 86.2%;
+        height: 10%;
+        border-top-right-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 13.8%;
+        background-color: rgba($color: #28292B, $alpha: 0.95);
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid rgb(27, 27, 27);
+
+        li {
+            padding: 10px;
+            cursor: default;
+        }
+
+        li:not(.documents) {
+            color: #4D4E50;
+        }
+
+        .prev {
+            padding-left: 20px;
+        }
+
+        .documents {
+            font-weight: bold;
+        }
+
+    }
+
+    .contentFolders {
+        width: 26.2%;
+        height: 90%;
+        margin-right: 0;
+        margin-left: auto;
+        position: absolute;
+        top: 10%;
+        left: 13.8%;
+        border-right: 1px solid rgb(27, 27, 27);
+
+        .folderW, .folderC, .folderF {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 20px;
+
+            li {
+                padding-right: 15px;
+                cursor: pointer;
+            }
+
+            .icon path{
+                fill: orange;
+            }
+        }
+    }
+
+    .contentW {
+        width: 26.2%;
+        height: 90%;
+        margin-right: 0;
+        margin-left: auto;
+        position: absolute;
+        top: 10%;
+        left: 40%;
+        border-right: 1px solid rgb(27, 27, 27);
+
+        .fileW, .docentW{
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 20px;
+
+            li {
+                padding-right: 15px;
+                cursor: pointer;
+            }
+
+            .icon path{
+                fill: orange;
+            }
+        }
+    }
+}
