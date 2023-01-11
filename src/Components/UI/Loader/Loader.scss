@@ -9,7 +9,7 @@
     height: $fullHeight;
     background-color: $black;
     animation: fadeOut 0.75s linear forwards;
-    animation-delay: 3.5s;
+    animation-delay: 5.25s;
 
     @keyframes fadeOut {
         from {opacity: 1;}    
@@ -69,7 +69,7 @@
 	background-color: currentColor;
 	width: 0;
 	height: 100%;
-    transition: all 2s cubic-bezier(1,0,.6,1);
+    transition: all 5s cubic-bezier(1,0,.6,1);
 }
 .filling {
 	width: 100%;
