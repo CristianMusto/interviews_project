@@ -3,7 +3,7 @@ import "./Loader.scss";
 import Logo from "../../../Images/Logo.png";
 
 const Loader = () => {
-    
+
     const int = 3;
 
     setTimeout(function(){
@@ -20,7 +20,7 @@ const Loader = () => {
                     <div className="progress"></div>
                 </div>
                 <div className="feedback">
-                    Sto sbloccando...
+                    Accedo...
                 </div>
             </div>
         </div>

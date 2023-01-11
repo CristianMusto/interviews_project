@@ -1,2 +1,5 @@
 @import '__mixins';
 @import '__variables';
+
+@include font-face(myriadBold, MYRIADPRO-BOLD);
+@include font-face(myriad, MYRIADPRO-REGULAR)

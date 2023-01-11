@@ -2,6 +2,10 @@
 @import "./styles/_mixins";
 @import "./styles/_variables";
 
+* {
+    font-family: "myriad";
+}
+
 .App {
     margin: 0;
     padding: 0;
