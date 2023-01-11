@@ -1,5 +1,6 @@
 import styles from "./MenuBar.module.scss"
 import { useState, useEffect } from 'react';
+import { Link } from "react-scroll";
 
 const MenuBar = () => {
     const [time, setTime] = useState(new Date());
@@ -30,14 +31,59 @@ const MenuBar = () => {
         <div className={styles.menubar}>
             <ul className={styles.listMenuSx}>
                 <li>🍎</li>
-                <li><b>Home</b></li>
-                <li>Chi siamo</li>
-                <li>Corsi</li>
-                <li>Domande frequanti</li>
-                <li>Contatti</li>
+                <li>
+                    <Link 
+                    to="Home"
+                    activeClass={styles.active}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={1000}
+                    delay={250}
+                    >Home</Link></li>
+                <li><Link 
+                    to="Whoarewe"
+                    activeClass={styles.active}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={1000}
+                    delay={250}
+                    >Chi siamo</Link></li>
+                <li><Link 
+                    to="Course"
+                    activeClass={styles.active}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={1000}
+                    delay={250}
+                    >Course</Link></li>
+                <li><Link 
+                    to="Faq"
+                    activeClass={styles.active}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={1000}
+                    delay={250}
+                    >Domande frequenti</Link></li>
+                <li><Link 
+                    to="Contacts"
+                    activeClass={styles.active}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={1000}
+                    delay={250}
+                    >Contatti</Link></li>
             </ul>
             <ul className={styles.listMenuDx}>
-                <li>✨</li>
+                <li>
+                    <div className={styles.menuIco}>
+                        <img src="https://eshop.macsales.com/blog/wp-content/uploads/2021/03/control-center-icon.png" alt="" className={styles.controlCenter} />
+                    </div>
+                </li>
                 <li>{CurrentDate()}</li>
                 <li>{timeString}</li>
             </ul>
