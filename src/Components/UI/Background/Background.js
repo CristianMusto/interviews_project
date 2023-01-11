@@ -1,5 +1,4 @@
 import "./Background.scss";
-import { useState, useEffect } from "react";
 
 const LAYERS = 10;
 const X_VARIANCE = 500;

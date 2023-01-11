@@ -2,6 +2,7 @@ import './App.scss';
 import { useEffect } from 'react';
 import Main from './Components/Main/Main';
 import MenuBar from './Components/MenuBar/MenuBar'
+import Loader from './Components/UI/Loader/Loader';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div className="App">
+      <Loader />
       <MenuBar />
       <Main />
     </div>

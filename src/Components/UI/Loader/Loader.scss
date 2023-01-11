@@ -1,0 +1,65 @@
+@import "../../../styles/_variables";
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: $fullHeight;
+    background-color: $black;
+
+    animation: fadeOut 1s linear forwards;
+    animation-delay: 3.5s;
+
+    @keyframes fadeOut {
+        from {opacity: 1;}    
+        to {opacity: 0;}
+    }
+}
+
+.loader-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+*, *:before, *:after {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.logo {
+	display: block;
+	width: 50%;
+	height: 50%;
+    margin: 0 auto 2.5rem;
+}
+.update-bar {
+	background-color: rgba(255,255,255,0.1);
+	border-radius: 0.25em;
+	box-shadow: 0 0 0 0.1em rgba(255,255,255,0.1) inset;
+	margin-bottom: 1em;
+	overflow: hidden;
+	width: 20em;
+	height: 0.5em;
+}
+
+.feedback {
+    text-align: center;
+}
+
+.progress {
+	background-color: currentColor;
+	width: 0;
+	height: 100%;
+    transition: all 2s cubic-bezier(1,0,.6,1);
+}
+.filling {
+	width: 100%;
+}
+
+
