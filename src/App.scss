@@ -2,6 +2,15 @@
 @import "./styles/_mixins";
 @import "./styles/_variables";
 
+* {
+    font-family: "myriad";
+    @include fluid-type(12, 18, 200, 1920);
+
+    h2 {
+        @include fluid-type(18, 22, 200, 1920); 
+    }
+}
+
 .App {
     margin: 0;
     padding: 0;

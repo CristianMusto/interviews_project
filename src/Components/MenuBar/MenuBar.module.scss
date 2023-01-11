@@ -1,0 +1,88 @@
+@import "../../styles/_font-faces";
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+
+.menubar {
+    width: 100%;
+    height: 5%;
+    background-color: rgba($color: #232323, $alpha: 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    .listMenuSx{
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        padding-left: 1.5rem;
+
+        li {
+            padding: 0 1rem;
+            cursor: pointer;
+        }
+
+        .logo {
+            width: 4%;
+            padding-right: 0;
+
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .active {
+            font-family: "myriadBold";
+        }
+
+        li:nth-child(1) {
+            padding-left: 0;
+        }
+    }
+
+    .listMenuDx{
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        padding-right: 1.5rem;
+
+        li {
+            padding: 0 0.75rem;
+        }
+
+        li:nth-child(3), li:nth-child(1) {
+            padding: 0;
+        }
+
+
+        .menuIco {
+            height: 100%;
+            width: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 0.75rem;
+    
+            .controlCenter {
+                -webkit-filter: invert(100%);
+                filter: invert(100%);
+                transform: scale(0.015);
+            }
+        }
+    }
+}

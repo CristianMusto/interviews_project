@@ -1,7 +1,8 @@
 import './App.scss';
-import Header from './Components/Header/Header';
 import { useEffect } from 'react';
 import Main from './Components/Main/Main';
+import MenuBar from './Components/MenuBar/MenuBar'
+import Loader from './Components/UI/Loader/Loader';
 
 function App() {
 
@@ -11,12 +12,17 @@ function App() {
   }
 
   useEffect(() =>{
-    handleVH()
+    handleVH();
+
+    window.addEventListener("resize", () => {
+      handleVH();
+    })
   })
 
   return (
     <div className="App">
-      <Header className="sidebar"/>
+      <Loader />
+      <MenuBar />
       <Main />
     </div>
   );

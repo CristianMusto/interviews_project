@@ -1,0 +1,78 @@
+@import "../../../styles/_variables";
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: $fullHeight;
+    background-color: $black;
+    animation: fadeOut 0.75s linear forwards;
+    animation-delay: 5.25s;
+
+    @keyframes fadeOut {
+        from {opacity: 1;}    
+        to {opacity: 0; z-index: -1;}
+    }
+}
+
+.blurBG {
+    filter: blur(10px);
+}
+
+.loader-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .logo {
+        max-width: 150px;
+        max-height: 150px;
+        width: 100%;
+        border: 1px solid #232323;
+        background-color: #232323;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+*, *:before, *:after {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.update-bar {
+	background-color: rgba(255,255,255,0.1);
+	border-radius: 0.25em;
+	box-shadow: 0 0 0 0.1em rgba(255,255,255,0.1) inset;
+	margin-bottom: 1em;
+	overflow: hidden;
+	width: 20em;
+	height: 0.5em;
+}
+
+.feedback {
+    text-align: center;
+}
+
+.progress {
+	background-color: currentColor;
+	width: 0;
+	height: 100%;
+    transition: all 5s cubic-bezier(1,0,.6,1);
+}
+.filling {
+	width: 100%;
+}
+
+
