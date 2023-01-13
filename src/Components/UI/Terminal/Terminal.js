@@ -66,7 +66,7 @@ const TerminalComp = () => {
   
   return (
     <>
-      {isDisplayed && <Terminal lines={termLines} interval={90} />}
+      {isDisplayed && <Terminal lines={termLines} interval={90} className="terminal"/>}
     </>
   )
 }

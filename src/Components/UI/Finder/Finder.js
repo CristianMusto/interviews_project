@@ -138,92 +138,94 @@ const Finder = (props) => {
     }, [props]);
 
     return (
-        <div className={`window ${isInView ? "isInView" : ""}`}>
-            <div className="sidebar">
-                <ul className="dots">
-                    <li className="close"></li>
-                    <li className="min"></li>
-                    <li className="expand"></li>
+        <div className="container">
+            <div className={`window ${isInView ? "isInView" : ""}`}>
+                <div className="sidebar">
+                    <ul className="dots">
+                        <li className="close"></li>
+                        <li className="min"></li>
+                        <li className="expand"></li>
+                    </ul>
+        
+                    <ul className="sidebarFav">
+                        <li className="fav">Preferiti</li>
+                        <li className="air">AirDrop</li>
+                        <li className="rec">Recenti</li>
+                        <li className="app">Applicazioni</li>
+                        <li className="dloads">Downloads</li>
+                        <li className="docs">Documenti</li>
+                    </ul>
+        
+                    <ul className="device">
+                        <li className="dev">Dispositivi</li>
+                        <li className="pc">PC</li>
+                        <li className="hard">T7</li>
+                    </ul>
+                </div>
+    
+                <ul className="header">
+                    <li className="prev">&lt;</li>
+                    <li className="next">&gt;</li>
+                    <li className="documents">Documenti</li>
                 </ul>
     
-                <ul className="sidebarFav">
-                    <li className="fav">Preferiti</li>
-                    <li className="air">AirDrop</li>
-                    <li className="rec">Recenti</li>
-                    <li className="app">Applicazioni</li>
-                    <li className="dloads">Downloads</li>
-                    <li className="docs">Documenti</li>
-                </ul>
+                <div className="contentFolders">
+                    <ul className={`${"folderW"} ${focusW ? "active" : ''}`} onClick={folderClickHandleW}>
+                        <li className="folder">
+                            <FontAwesomeIcon icon={faFolder} className="icon"/>
+                        </li>
+                        <li className="name">Chi siamo</li>
+                    </ul>
     
-                <ul className="device">
-                    <li className="dev">Dispositivi</li>
-                    <li className="pc">PC</li>
-                    <li className="hard">T7</li>
-                </ul>
+                    <ul className={`${"folderC"} ${focusC ? "active" : ''}`} onClick={folderClickHandleC}>
+                        <li className="folder">
+                            <FontAwesomeIcon icon={faFolder} className="icon"/>
+                        </li>
+                        <li className="name">Course</li>
+                    </ul>
+    
+                    <ul className={`${"folderF"} ${focusF ? "active" : ''}`} onClick={folderClickHandleF}>
+                        <li className="folder">
+                            <FontAwesomeIcon icon={faFolder} className="icon"/>
+                        </li>
+                        <li className="name">Domande frequenti</li>
+                    </ul>
+                </div>
+    
+                <div className={`${"contentW"} ${activeW ? "active" : ''}`}>
+                    <ul className={`${"fileW"} ${fileFocusW ? "active" : ''}`} onClick={fileClickHandleW}>
+                        <li className="file">
+                            <FontAwesomeIcon icon={faFile} className="icon"/>
+                        </li>
+                        <li className="name">Chi_siamo.txt</li>
+                    </ul>
+                    <ul className={`${"docentW"} ${docFocusW ? "active" : ''}`} onClick={docClickHandleW}>
+                        <li className="file">
+                            <FontAwesomeIcon icon={faFile} className="icon"/>
+                        </li>
+                        <li className="name">Il_nostro_docente.txt</li>
+                    </ul>
+                </div>
+    
+                <div className={`${"contentC"} ${activeC ? "active" : ''}`}>
+                    <ul className={`${"fileC"} ${fileFocusC ? "active" : ''}`} onClick={fileClickHandleC}>
+                        <li className="file">
+                            <FontAwesomeIcon icon={faFile} className="icon"/>
+                        </li>
+                        <li className="name">I_nostri_corsi.txt</li>
+                    </ul>
+                </div>
+    
+                <div className={`${"contentF"} ${activeF ? "active" : ''}`}>
+                    <ul className={`${"fileF"} ${fileFocusF ? "active" : ''}`} onClick={fileClickHandleF}>
+                        <li className="file">
+                            <FontAwesomeIcon icon={faFile} className="icon"/>
+                        </li>
+                        <li className="name">Domande_frequenti.txt</li>
+                    </ul>
+                </div>
+    
             </div>
-
-            <ul className="header">
-                <li className="prev">&lt;</li>
-                <li className="next">&gt;</li>
-                <li className="documents">Documenti</li>
-            </ul>
-
-            <div className="contentFolders">
-                <ul className={`${"folderW"} ${focusW ? "active" : ''}`} onClick={folderClickHandleW}>
-                    <li className="folder">
-                        <FontAwesomeIcon icon={faFolder} className="icon"/>
-                    </li>
-                    <li className="name">Chi siamo</li>
-                </ul>
-
-                <ul className={`${"folderC"} ${focusC ? "active" : ''}`} onClick={folderClickHandleC}>
-                    <li className="folder">
-                        <FontAwesomeIcon icon={faFolder} className="icon"/>
-                    </li>
-                    <li className="name">Course</li>
-                </ul>
-
-                <ul className={`${"folderF"} ${focusF ? "active" : ''}`} onClick={folderClickHandleF}>
-                    <li className="folder">
-                        <FontAwesomeIcon icon={faFolder} className="icon"/>
-                    </li>
-                    <li className="name">Domande frequenti</li>
-                </ul>
-            </div>
-
-            <div className={`${"contentW"} ${activeW ? "active" : ''}`}>
-                <ul className={`${"fileW"} ${fileFocusW ? "active" : ''}`} onClick={fileClickHandleW}>
-                    <li className="file">
-                        <FontAwesomeIcon icon={faFile} className="icon"/>
-                    </li>
-                    <li className="name">Chi_siamo.txt</li>
-                </ul>
-                <ul className={`${"docentW"} ${docFocusW ? "active" : ''}`} onClick={docClickHandleW}>
-                    <li className="file">
-                        <FontAwesomeIcon icon={faFile} className="icon"/>
-                    </li>
-                    <li className="name">Il_nostro_docente.txt</li>
-                </ul>
-            </div>
-
-            <div className={`${"contentC"} ${activeC ? "active" : ''}`}>
-                <ul className={`${"fileC"} ${fileFocusC ? "active" : ''}`} onClick={fileClickHandleC}>
-                    <li className="file">
-                        <FontAwesomeIcon icon={faFile} className="icon"/>
-                    </li>
-                    <li className="name">I_nostri_corsi.txt</li>
-                </ul>
-            </div>
-
-            <div className={`${"contentF"} ${activeF ? "active" : ''}`}>
-                <ul className={`${"fileF"} ${fileFocusF ? "active" : ''}`} onClick={fileClickHandleF}>
-                    <li className="file">
-                        <FontAwesomeIcon icon={faFile} className="icon"/>
-                    </li>
-                    <li className="name">Domande_frequenti.txt</li>
-                </ul>
-            </div>
-
         </div>
     )
 }
