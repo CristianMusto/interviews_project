@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from "react-scroll";
 import Logo from "../../Images/Logo.png";
 
-const MenuBar = () => {
+const MenuBar = (props) => {
     const [time, setTime] = useState(new Date());
 
     useEffect(() => {
@@ -50,6 +50,8 @@ const MenuBar = () => {
                     offset={0}
                     duration={1000}
                     delay={250}
+                    onSetActive={props.onActive}
+                    onSetInactive={props.onInactive}
                     >Chi siamo</Link></li>
                 <li><Link 
                     to="Course"

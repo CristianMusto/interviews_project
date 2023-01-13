@@ -9,7 +9,7 @@ const Main = props => {
         <div className={styles.main}>
             <Background />
             <Home />
-            <Whoarewe />
+            <Whoarewe inView={props.isInView}/>
         </div>
     )
 }
