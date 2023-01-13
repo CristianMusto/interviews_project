@@ -1,21 +1,23 @@
 import "./Finder.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFolder, faFile } from '@fortawesome/free-solid-svg-icons'
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
-const Finder = () => {
+const Finder = (props) => {
 
-    const [focusW, setFocusW] = useState(false);
+    const [focusW, setFocusW] = useState(true);
     const [focusC, setFocusC] = useState(false);
     const [focusF, setFocusF] = useState(false);
-    const [activeW, setActiveW] = useState(false);
+    const [activeW, setActiveW] = useState(true);
     const [activeC, setActiveC] = useState(false);
     const [activeF, setActiveF] = useState(false);
 
-    const [fileFocusW, setFileFocusW] = useState(false)
-    const [docFocusW, setDocFocusW] = useState(false)
-    const [fileFocusC, setFileFocusC] = useState(false)
-    const [fileFocusF, setFileFocusF] = useState(false)
+    const [fileFocusW, setFileFocusW] = useState(false);
+    const [docFocusW, setDocFocusW] = useState(false);
+    const [fileFocusC, setFileFocusC] = useState(false);
+    const [fileFocusF, setFileFocusF] = useState(false);
+
+    const [isInView, setIsInView] = useState(false);
 
     const folderClickHandleW = () => {
         if (focusW === false) {
@@ -127,8 +129,16 @@ const Finder = () => {
         }
     }
 
+    useEffect(() => {
+        if (props.view === true) {
+            setIsInView(true);
+        } else {
+            setIsInView(false);
+        }
+    }, [props]);
+
     return (
-        <div className="window">
+        <div className={`window ${isInView ? "isInView" : ""}`}>
             <div className="sidebar">
                 <ul className="dots">
                     <li className="close"></li>

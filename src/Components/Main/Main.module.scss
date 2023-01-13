@@ -2,5 +2,7 @@
 @import "../../styles/_mixins";
 @import "../../styles/_variables";
 
-
+.main {
+    height: calc(#{$fullHeight} * 8);
+}
 
