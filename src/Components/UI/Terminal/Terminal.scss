@@ -9,6 +9,14 @@
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
     background: rgba($color: #232323, $alpha: 0.90);
     top: 2%;
+    transform: scale(1);
+    opacity: 1;
+    animation: scaleW 1s linear;
+
+    @keyframes scaleW {
+      0% {transform: scale(0); opacity: 0;}
+      100% {transform: scale(1); opacity: 1;}
+    }
 }
   
 .Terminal-term {

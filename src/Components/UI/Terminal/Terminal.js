@@ -1,5 +1,6 @@
 import Terminal from 'react-animated-term';
 import "./Terminal.scss"
+import { useState, useEffect } from 'react';
 
 const CurrentDate = () => {
   const date = new Date();
@@ -15,6 +16,7 @@ const CurrentDate = () => {
 }
 
 const TerminalComp = () => {
+  const [isDisplayed, setIsDisplayed] = useState(false);
   const dateString = CurrentDate();
   const spinner = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
   const termLines = [
@@ -23,36 +25,49 @@ const TerminalComp = () => {
       'cmd': false
     },
     {
-      'text': 'cd desktop/professional_growth/Exploit_Interviews',
+      'text': 'cd Courses/professional_growth/Exploit_Interviews',
       'cmd': true 
     },
     {
-      text: '✔ Loaded course',
+      text: '✔ Loaded',
       cmd: false,
       repeat: true,
       repeatCount: 5,
       frames: spinner.map(function (spinner) {
         return {
-          text: spinner + ' Loading course',
-          delay: 30
+          text: spinner + ' Loading',
+          delay: 10
         }
       })
     },
     {
-      'text': 'cd more',
-      'cmd': true
+      'text': 'cat intro.txt',
+      'cmd': true 
     },
     {
-        'text': 'DAJE!',
-        'cmd': false
+      'text': 'Nostrud ipsum cillum enim esse cupidatat qui pariatur ex duis laboris laboris laborum.',
+      'cmd': false
+    },
+    {
+        'text': 'cat subtitle.txt',
+        'cmd': true
+    },
+    {
+      'text': 'Nostrud ipsum cillum enim esse cupidatat qui pariatur ex duis laboris laboris laborum.',
+      'cmd': false
     }
   ]
+
+  useEffect(() => {
+    setInterval(() => {
+      setIsDisplayed(true);
+    }, 6000);
+  }, [])
   
   return (
-    <Terminal
-      lines={termLines}
-      interval={80}
-    />
+    <>
+      {isDisplayed && <Terminal lines={termLines} interval={90} />}
+    </>
   )
 }
 
