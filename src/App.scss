@@ -4,10 +4,10 @@
 
 * {
     font-family: "myriad";
-    @include fluid-type(12, 18, 200, 1920);
+    @include fluid-type(14, 20, 200, 1920);
 
     h2 {
-        @include fluid-type(18, 22, 200, 1920); 
+        @include fluid-type(18, 40, 200, 1920); 
     }
 }
 

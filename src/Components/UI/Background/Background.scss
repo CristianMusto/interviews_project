@@ -6,7 +6,22 @@
   position: relative;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 0;
+
+  path {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 60s linear infinite;
+    position: relative;
+    z-index: 2;
+    
+
+    @keyframes dash {
+      0% { stroke-dashoffset: 2000; }
+      50% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 2000; }
+    }
+  }
 }
 
 .background {
@@ -15,7 +30,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 button {

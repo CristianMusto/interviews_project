@@ -6,10 +6,10 @@ import Whoarewe from "./Whoarewe/Whoarewe"
 const Main = props => {
 
     return (
-        <div className={styles.main}>
+        <div className={styles.main} speed={-5}>
             <Background />
             <Home />
-            <Whoarewe inView={props.isInView}/>
+            <Whoarewe isInView={props.isInView}/>
         </div>
     )
 }

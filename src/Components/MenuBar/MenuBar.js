@@ -38,7 +38,7 @@ const MenuBar = (props) => {
                     activeClass={styles.active}
                     spy={true}
                     smooth={true}
-                    offset={0}
+                    offset={-100}
                     duration={1000}
                     delay={250}
                     >Home</Link></li>
@@ -47,7 +47,7 @@ const MenuBar = (props) => {
                     activeClass={styles.active}
                     spy={true}
                     smooth={true}
-                    offset={0}
+                    offset={-100}
                     duration={1000}
                     delay={250}
                     onSetActive={props.onActive}
