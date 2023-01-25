@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "myriadBold";
+  src: url("../Fonts/MYRIADPRO-BOLD.ttf") format("truetype");
+}
+@font-face {
+  font-family: "myriad";
+  src: url("../Fonts/MYRIADPRO-REGULAR.ttf") format("truetype");
+}
+* {
+  font-family: "myriad";
+  font-size: 14px;
+}
+@media only screen and (min-width: 200px) {
+  * {
+    font-size: calc(
+      14px + 6 * (100vw - 200px) / (1920 - 200)
+    );
+  }
+}
+@media only screen and (min-width: 1920px) {
+  * {
+    font-size: 20px;
+  }
+}
+* h2 {
+  font-size: 18px;
+}
+@media only screen and (min-width: 200px) {
+  * h2 {
+    font-size: calc(
+      18px + 22 * (100vw - 200px) / (1920 - 200)
+    );
+  }
+}
+@media only screen and (min-width: 1920px) {
+  * h2 {
+    font-size: 40px;
+  }
+}
+
+.App {
+  margin: 0;
+  padding: 0;
+}
+.App .sidebar ul {
+  list-style: none;
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "myriadBold";
+  src: url("../Fonts/MYRIADPRO-BOLD.ttf") format("truetype");
+}
+@font-face {
+  font-family: "myriad";
+  src: url("../Fonts/MYRIADPRO-REGULAR.ttf") format("truetype");
+}
+.whoarewe {
+  padding-bottom: 20px;
+  position: relative;
+  top: 0;
+}
+.whoarewe .txt, .whoarewe .docent {
+  transform: scale(0);
+  background: rgba(35, 35, 35, 0.9);
+  padding: 1.5rem;
+  width: 75%;
+  height: calc(calc(var(--vh, 1vh) * 100) - 25vh);
+  border: 1px solid #505156;
+  border-radius: 10px;
+  margin: 0 auto 5rem auto;
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+.whoarewe .txt.active, .whoarewe .docent.active {
+  transform: scale(1);
+  padding-top: 1.5rem;
+  opacity: 1;
+  transition: all 0.5s linear;
+}
+.whoarewe .txt .dots, .whoarewe .docent .dots {
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding-bottom: 2.5%;
+}
+.whoarewe .txt .dots li, .whoarewe .docent .dots li {
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  top: 2.5%;
+  transform: translateY(-50%);
+}
+.whoarewe .txt .dots li, .whoarewe .docent .dots li {
+  color: black;
+}
+.whoarewe .txt .dots li.close, .whoarewe .docent .dots li.close {
+  background-color: #FF5F56;
+  left: 0px;
+}
+.whoarewe .txt .dots li.min, .whoarewe .docent .dots li.min {
+  background-color: #FFBE2D;
+  left: 20px;
+}
+.whoarewe .txt .dots li.min p, .whoarewe .docent .dots li.min p {
+  font-size: 15px;
+}
+.whoarewe .txt .dots li.expand, .whoarewe .docent .dots li.expand {
+  background-color: #25C940;
+  left: 40px;
+}
+.whoarewe .txt .content, .whoarewe .docent .content {
+  padding-top: 1.2rem;
+}
+.whoarewe .txt .content h2, .whoarewe .docent .content h2 {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}/*# sourceMappingURL=Whoarewe.module.css.map */

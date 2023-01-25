@@ -1,0 +1,63 @@
+.mountains {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.mountains path {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  -webkit-animation: dash 60s linear infinite;
+          animation: dash 60s linear infinite;
+  position: relative;
+  z-index: 2;
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 2000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 2000;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 2000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 2000;
+  }
+}
+
+.background {
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #46b799;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover {
+  background: #5cebc5;
+}/*# sourceMappingURL=Background.css.map */

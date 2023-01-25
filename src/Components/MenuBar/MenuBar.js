@@ -38,9 +38,6 @@ const MenuBar = (props) => {
                     activeClass={styles.active}
                     spy={true}
                     smooth={true}
-                    offset={-100}
-                    duration={1000}
-                    delay={250}
                     >Home</Link></li>
                 <li><Link 
                     to="Whoarewe"
@@ -48,20 +45,20 @@ const MenuBar = (props) => {
                     spy={true}
                     smooth={true}
                     offset={-100}
-                    duration={1000}
-                    delay={250}
-                    onSetActive={props.onActive}
-                    onSetInactive={props.onInactive}
+                    duration={500}
+                    onSetActive={props.onActiveWho}
+                    onSetInactive={props.onInactiveWho}
                     >Chi siamo</Link></li>
                 <li><Link 
                     to="Course"
                     activeClass={styles.active}
                     spy={true}
                     smooth={true}
-                    offset={0}
-                    duration={1000}
-                    delay={250}
-                    >Course</Link></li>
+                    offset={-100}
+                    duration={500}
+                    onSetActive={props.onActiveCourse}
+                    onSetInactive={props.onInactiveCourse}
+                    >Corso</Link></li>
                 <li><Link 
                     to="Faq"
                     activeClass={styles.active}
