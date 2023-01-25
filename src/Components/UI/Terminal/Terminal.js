@@ -21,11 +21,11 @@ const TerminalComp = () => {
   const spinner = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
   const termLines = [
     {
-      'text': `login: ${dateString}`,
+      'text': `Login: ${dateString}`,
       'cmd': false
     },
     {
-      'text': 'cd Courses/professional_growth/Exploit_Interviews',
+      'text': 'cd Exploit_Interviews',
       'cmd': true 
     },
     {

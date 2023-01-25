@@ -1,8 +1,9 @@
+import styles from "./Footer.module.scss"
 
 const Footer = () => {
     return (
-        <div>
-
+        <div className={styles.footer} id="Contacts">
+            
         </div>
     )
 

@@ -1,4 +1,5 @@
 @import "../../../styles/_variables";
+@import "../../../styles/_font-faces";
 
 .Terminal-window {
     position: absolute;
@@ -47,7 +48,7 @@
 
 .Terminal-console {
   font-size: 18px;
-  font-family: Menlo, DejaVu Sans Mono, Consolas, Lucida Console, monospace;
+  font-family: "myriad";
   line-height: 24px;
   color: rgb(255, 255, 255);
   margin: 0px 16px;

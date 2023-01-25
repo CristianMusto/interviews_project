@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "myriadBold";
+  src: url("../Fonts/MYRIADPRO-BOLD.ttf") format("truetype");
+}
+@font-face {
+  font-family: "myriad";
+  src: url("../Fonts/MYRIADPRO-REGULAR.ttf") format("truetype");
+}
+.footer {
+  background-color: #232323;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  position: relative;
+  top: 0;
+  z-index: 5;
+}/*# sourceMappingURL=Footer.module.css.map */

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Main from './Components/Main/Main';
 import MenuBar from './Components/MenuBar/MenuBar'
 import Loader from './Components/UI/Loader/Loader';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   const [isInViewWho, setIsInViewWho] = useState(false);
@@ -47,6 +48,7 @@ function App() {
         onInactiveCourse={viewInactiveCourseHandler}
       />
       <Main isInViewWho={isInViewWho} isInViewCourse={isInViewCourse}/>
+      <Footer />
     </div>
   );
 }

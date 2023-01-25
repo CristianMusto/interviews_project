@@ -7,6 +7,15 @@ const Window = props => {
                 <li className={props.classNameDotsExpand}></li>
             </ul>
 
+            {props.imgSrc 
+                ? 
+                <div className={props.classNameImgContainer}>
+                    <img src={props.imgSrc} alt={props.imgAlt} className={props.classNameImg}/>
+                </div> 
+                : 
+                ""
+            }
+
             <div className={props.classNameContent}>
                 <h2>
                     {props.title}
