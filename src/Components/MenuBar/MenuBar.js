@@ -38,6 +38,7 @@ const MenuBar = (props) => {
                     activeClass={styles.active}
                     spy={true}
                     smooth={true}
+                    offset={-100}
                     >Home</Link></li>
                 <li><Link 
                     to="Whoarewe"
