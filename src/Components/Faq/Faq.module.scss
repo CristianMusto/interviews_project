@@ -1,0 +1,12 @@
+@import "../../styles/_font-faces";
+@import "../../styles/_mixins";
+@import "../../styles/_variables";
+
+.faq {
+    background-color: $white;
+    height: $fullHeight;
+    width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 3;
+}

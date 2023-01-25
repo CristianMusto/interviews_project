@@ -4,6 +4,7 @@ import Main from './Components/Main/Main';
 import MenuBar from './Components/MenuBar/MenuBar'
 import Loader from './Components/UI/Loader/Loader';
 import Footer from './Components/Footer/Footer';
+import Faq from './Components/Faq/Faq';
 
 function App() {
   const [isInViewWho, setIsInViewWho] = useState(false);
@@ -48,6 +49,7 @@ function App() {
         onInactiveCourse={viewInactiveCourseHandler}
       />
       <Main isInViewWho={isInViewWho} isInViewCourse={isInViewCourse}/>
+      <Faq />
       <Footer />
     </div>
   );
