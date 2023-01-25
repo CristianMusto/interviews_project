@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "myriadBold";
+  src: url("../Fonts/MYRIADPRO-BOLD.ttf") format("truetype");
+}
+@font-face {
+  font-family: "myriad";
+  src: url("../Fonts/MYRIADPRO-REGULAR.ttf") format("truetype");
+}
+body {
+  margin: 0;
+  background-color: #232323;
+  color: #FFFFFF;
+}/*# sourceMappingURL=index.css.map */

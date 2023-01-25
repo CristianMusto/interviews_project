@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "myriadBold";
+  src: url("../Fonts/MYRIADPRO-BOLD.ttf") format("truetype");
+}
+@font-face {
+  font-family: "myriad";
+  src: url("../Fonts/MYRIADPRO-REGULAR.ttf") format("truetype");
+}
+.menubar {
+  width: 100%;
+  height: 5%;
+  background-color: rgba(35, 35, 35, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menubar .listMenuSx {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 1.5rem;
+}
+.menubar .listMenuSx li {
+  padding: 0 1rem;
+  cursor: pointer;
+}
+.menubar .listMenuSx .logo {
+  width: 4%;
+  padding-right: 0;
+}
+.menubar .listMenuSx .logo img {
+  width: 100%;
+}
+.menubar .listMenuSx .active {
+  font-family: "myriadBold";
+}
+.menubar .listMenuSx li:nth-child(1) {
+  padding-left: 0;
+}
+.menubar .listMenuDx {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-right: 1.5rem;
+}
+.menubar .listMenuDx li {
+  padding: 0 0.75rem;
+}
+.menubar .listMenuDx li:nth-child(3), .menubar .listMenuDx li:nth-child(1) {
+  padding: 0;
+}
+.menubar .listMenuDx .menuIco {
+  height: 100%;
+  width: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0.75rem;
+}
+.menubar .listMenuDx .menuIco .controlCenter {
+  filter: invert(100%);
+  transform: scale(0.015);
+}/*# sourceMappingURL=MenuBar.module.css.map */
