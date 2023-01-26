@@ -11,7 +11,13 @@
     box-sizing: border-box;
     margin-bottom: 16px;
     cursor: pointer;
+    transform: scale(1);
+    animation: ScaleIn 1s linear;
 
+    @keyframes ScaleIn {
+        from {transform: scale(0);}
+        to {transform: scale(1);}
+    }
 
     &::before {
         content: "";

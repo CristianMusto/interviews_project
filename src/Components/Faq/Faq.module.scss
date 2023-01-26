@@ -3,7 +3,7 @@
 @import "../../styles/_variables";
 
 .faq {
-    background-color: $black;
+    background-color: #303030;
     width: 100%;
     height: auto;
     position: relative;
@@ -15,11 +15,20 @@
     flex-wrap: wrap;
     gap: 10%;
     padding: 4rem 1.5rem;
+    transition: all .25s linear;
 
     h2 {
         flex: 0 0 100%;
         text-align: center;
         padding-bottom: 5rem;
+        text-shadow: -10px 20px 10px rgba(0, 0, 0);
+    }
+
+    .parag {
+        flex: 0 0 100%;
+        text-align: center;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
         text-shadow: -10px 20px 10px rgba(0, 0, 0);
     }
 

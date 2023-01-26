@@ -85,6 +85,7 @@ const Faq = props => {
                     <FaqCard className={styles.card} title={el.title} description={el.description} key={el.index}/>
                 ))
             }
+            <p className={styles.parag}>Se hai altre domande contattaci pure!</p>
         </div>
     )
 }

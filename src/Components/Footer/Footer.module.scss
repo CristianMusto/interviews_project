@@ -5,10 +5,10 @@
 .footer {
 
 
-    background-color: $black;
+    background-color: #303030;
 
     .newsContainer {
-        background-color: $black;
+        background-color: #303030;
         height: calc(#{$fullHeight} - 50vh);
         width: 100%;
         position: relative;
@@ -149,6 +149,7 @@
                         border: 0.08em solid #fff;
                         box-shadow: 0 0.4em 0.1em 0.019em #fff;
                         font-family: "myriad";
+                        text-shadow: -5px 5px 5px rgb(0, 0, 0);
 
                         &:hover {
                             transition: all 0.5s;
