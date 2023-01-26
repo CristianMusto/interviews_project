@@ -1,0 +1,100 @@
+@import "../../../styles/_font-faces";
+@import "../../../styles/_mixins";
+@import "../../../styles/_variables";
+
+.card {
+    width: 100%;
+    max-width: 290px;
+    height: 70px;
+    background: $black;
+    border: 1px solid #505156;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    backdrop-filter: blur(10px);
+    transition: 0.5s ease-in-out;
+    pointer-events: all;
+    opacity: 1;
+    &:hover {
+        cursor: default;
+        transform: scale(1.025);
+        .closeNotify {
+          cursor: pointer;
+          pointer-events: all;
+          opacity: 1;
+          transition: all 0.5 linear;
+        }
+        .img {
+            transition: 0.5s ease-in-out;
+            background: linear-gradient(#1E1F61, #009BE7);
+        }
+    }
+
+    &.close {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .img {
+        width: 17.5%;
+        height: 70%;
+        margin-left: 10px;
+        border-radius: 10px;
+        background: linear-gradient(#1E1F61, #009BE7);
+        position: relative;
+        top: 0;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+        }
+    }
+
+    .textBox {
+      width: calc(100% - 90px);
+      margin-left: 10px;
+      color: white;
+      font-family: "myriad";
+
+      .textContent {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        .span {
+          font-size: 10px;
+        }
+        
+        .h1 {
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+      
+      .p {
+        font-size: 12px;
+        font-weight: lighter;
+      }
+    }
+
+    .closeNotify {
+      background-color: #3f3f3f;
+      padding: 0.2rem 0.5rem;
+      border-radius: 100%;
+      position: absolute;
+      top: -20%;
+      left: -3%;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.5 linear;
+    }
+
+  }
+  
+  
+  
+  

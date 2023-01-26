@@ -1,0 +1,81 @@
+@import "../../../styles/_font-faces";
+@import "../../../styles/_mixins";
+@import "../../../styles/_variables";
+
+.card {
+  width: 15%;
+  padding: 0.5rem;
+  background: $black;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  position: relative;
+  border: 3px solid #505156;
+  box-shadow: -40px 50px 30px rgba(0, 0, 0);
+  transform: skewX(10deg);
+  transition: all 0.5s linear;
+  overflow: hidden;
+  color: white;
+  font-family: "myriad";
+  @include fluid-type(14, 20, 200, 1920);
+  cursor: pointer;
+
+  &.expanded {
+    height: auto;
+    transform: skew(0deg);
+
+    p {
+        height: 100%;
+        opacity: 1;
+        transition: all 0.5s linear;
+    }
+  }
+
+  p {
+    height: 0;
+    opacity: 0;
+    transition: all 0.5s linear;
+  }
+
+  .align {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-self: flex-start;
+
+    .red {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #ff605c;
+      box-shadow: -5px 5px 5px rgba(0, 0, 0);
+    }
+    
+    .yellow {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #ffbd44;
+      box-shadow: -5px 5px 5px rgba(0, 0, 0);
+    }
+    
+    .green {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #00ca4e;
+      box-shadow: -5px 5px 5px rgba(0, 0, 0);
+    }
+  }
+  
+  
+  h1 {
+    text-align: center;
+    margin: 0 auto 1rem auto;
+    color: white;
+    text-shadow: -10px 5px 10px rgba(0, 0, 0);
+    font-family: "myriadBold";
+  }
+}
+
+

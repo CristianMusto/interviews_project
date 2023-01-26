@@ -3,14 +3,13 @@
 @import "../../../styles/_mixins";
 
 .whoarewe {
-    padding-bottom: 20px;
     position: relative;
     top: 0;
 
     .txt, .docent {
         
         transform: scale(0);
-        background: rgba($color: #232323, $alpha: 0.90);
+        background: $black;
         padding: 1.5rem;
         width: 75%;
         height: calc(#{$fullHeight} - 25vh);

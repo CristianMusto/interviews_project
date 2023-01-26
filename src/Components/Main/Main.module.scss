@@ -4,5 +4,21 @@
 
 .main {
     height: calc(#{$fullHeight} * 4);
+    position: relative;
+    top: 0;
+    width: 100%;
+
+    .notify {
+        position: fixed;
+        top: 10%;
+        right: 1%;
+        z-index: 10;
+        animation: In 1s linear;
+
+        @keyframes In {
+            from {right: -100%;}
+            to {right: 1;}
+        }
+    }
 }
 

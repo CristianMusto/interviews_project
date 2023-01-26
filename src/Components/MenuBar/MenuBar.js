@@ -38,14 +38,14 @@ const MenuBar = (props) => {
                     activeClass={styles.active}
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-200}
                     >Home</Link></li>
                 <li><Link 
                     to="Whoarewe"
                     activeClass={styles.active}
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-200}
                     duration={500}
                     onSetActive={props.onActiveWho}
                     onSetInactive={props.onInactiveWho}
@@ -55,7 +55,7 @@ const MenuBar = (props) => {
                     activeClass={styles.active}
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-200}
                     duration={500}
                     onSetActive={props.onActiveCourse}
                     onSetInactive={props.onInactiveCourse}
@@ -80,11 +80,6 @@ const MenuBar = (props) => {
                     >Contatti</Link></li>
             </ul>
             <ul className={styles.listMenuDx}>
-                <li>
-                    <div className={styles.menuIco}>
-                        <img src="https://eshop.macsales.com/blog/wp-content/uploads/2021/03/control-center-icon.png" alt="" className={styles.controlCenter} />
-                    </div>
-                </li>
                 <li>{CurrentDate()}</li>
                 <li>{timeString}</li>
             </ul>

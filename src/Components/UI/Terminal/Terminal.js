@@ -32,11 +32,11 @@ const TerminalComp = () => {
       text: '✔ Loaded',
       cmd: false,
       repeat: true,
-      repeatCount: 5,
+      repeatCount: 1,
       frames: spinner.map(function (spinner) {
         return {
           text: spinner + ' Loading',
-          delay: 10
+          delay: 3
         }
       })
     },

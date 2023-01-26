@@ -1,14 +1,12 @@
 @import "../../../styles/_variables";
 
 .course {
-
-    padding-bottom: 20px;
     position: relative;
     top: 0;
 
     .txt {
         transform: scale(0);
-        background: rgba($color: #232323, $alpha: 0.90);
+        background: $black;
         padding: 1.5rem;
         width: 75%;
         height: calc(#{$fullHeight} - 25vh);

@@ -3,10 +3,28 @@
 @import "../../styles/_variables";
 
 .faq {
-    background-color: $white;
-    height: $fullHeight;
+    background-color: $black;
     width: 100%;
+    height: auto;
     position: relative;
     top: 0;
     z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10%;
+    padding: 4rem 1.5rem;
+
+    h2 {
+        flex: 0 0 100%;
+        text-align: center;
+        padding-bottom: 5rem;
+        text-shadow: -10px 20px 10px rgba(0, 0, 0);
+    }
+
+    .card {
+        flex: 0 0 15%;
+        margin-bottom: 4rem;
+    }
 }
