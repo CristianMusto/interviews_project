@@ -4,6 +4,10 @@
     position: relative;
     top: 0;
 
+    @media (max-width: 768px) {
+        padding: 2rem;
+    }
+
     .txt {
         transform: scale(0);
         background: $black;
@@ -15,6 +19,11 @@
         margin: 0 auto 5rem auto;
         transition: all .5s linear;
         opacity: 0;
+
+        @media (max-width: 768px) {
+            margin: 0;
+            width: 100%;
+        }        
 
         &.active {
             transform: scale(1);

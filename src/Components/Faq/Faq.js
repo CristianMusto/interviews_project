@@ -1,7 +1,27 @@
 import FaqCard from "../UI/FaqCard/FaqCard";
 import styles from "./Faq.module.scss";
+import { useState, useEffect } from "react";
 
 const Faq = props => {
+
+    const [isMobile, setIsMobile] = useState(false);
+    const [show, setShow] = useState(false);
+
+    const showAllHandler = () => {
+        if (show === false) {
+            setShow(true)
+        } else {
+            setShow(false)
+        }
+    }
+
+    useEffect(() => {
+        if (window.innerWidth <= 768) {
+            setIsMobile(true)
+        } else {
+            setIsMobile(false)
+        }
+    }, [])
 
     const questions = [
         {
@@ -82,8 +102,18 @@ const Faq = props => {
             <h2>Domande frequenti</h2>
             {
                 questions.map(el => (
-                    <FaqCard className={styles.card} title={el.title} description={el.description} key={el.index}/>
+                    <FaqCard className={styles.card} classNameMobile={show ? styles.show : styles.hide} title={el.title} description={el.description} key={el.index}/>
                 ))
+            }
+
+            { isMobile && 
+                <div className={styles.submitBtn}>
+                    <button className={styles.btn} onClick={showAllHandler}>
+                        <span className={styles.btnSpan}>
+                            { show ? "Mostra meno" : "Mostra tutto"}
+                        </span>
+                    </button>
+                </div>
             }
             <p className={styles.parag}>Se hai altre domande contattaci pure!</p>
         </div>

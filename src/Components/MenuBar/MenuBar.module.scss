@@ -13,9 +13,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 
-    .listMenuSx{
+    .listMenuSx {
         list-style: none;
         display: flex;
         justify-content: flex-start;
@@ -35,8 +34,7 @@
             width: 4%;
             padding-right: 0;
 
-
-            img{
+            img {
                 width: 100%;
             }
         }
@@ -50,7 +48,7 @@
         }
     }
 
-    .listMenuDx{
+    .listMenuDx {
         list-style: none;
         display: flex;
         justify-content: flex-end;
@@ -68,21 +66,145 @@
         li:nth-child(2) {
             padding: 0;
         }
+    }
+}
 
+.menubarMobile {
+    width: 100%;
+    height: 7.5%;
+    background-color: $black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        .menuIco {
-            height: 100%;
-            width: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-right: 0.75rem;
+    .hambMenu {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 15%;
+        z-index: 10;
+        transition: all .5s ease-in-out;
+        background-color: $black;
     
-            .controlCenter {
-                -webkit-filter: invert(100%);
-                filter: invert(100%);
-                transform: scale(0.015);
+        span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            border-radius: 9999px;
+            background-color: $white;
+            transition: all .4s ease-in-out;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        span:nth-child(1) {
+            transform: translate(-50%, 7px);
+        }
+
+        span:nth-child(3) {
+            transform: translate(-50%, -10px);
+        }
+
+        &.active {
+            transition-delay: .8s;
+            transform: rotate(45deg);
+
+            span:nth-child(2) {
+                width: 0;
             }
+
+            span:nth-child(1),
+            span:nth-child(3) {
+                transition-delay: .4s;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+
+            span:nth-child(1) {
+                transform: translate(-50%, -50%);
+            }
+
+            span:nth-child(3) {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+    }
+    
+    .listMenuDxMobile {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        padding-right: 1.5rem;
+
+        li {
+            padding: 0 0.75rem;
+        }
+
+        li:nth-child(2) {
+            padding: 0;
+        }
+    }
+}
+
+.menuVoices.notActive {
+    position: absolute;
+    top: -100%;
+    left: 0%;
+    width: 100%;
+    height: $fullHeight;
+    transform: translate(0%, -100%);
+}
+
+
+.menuVoices.active {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color: #232323;
+    width: 100%;
+    height: $fullHeight;
+    z-index: 99;
+    transition: all 1s linear;
+
+    .listMenuSxMobile {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        li {
+            cursor: pointer;
+            padding: 1.25rem 0;
+            a {
+                font-size: 30px;
+            }
+        }
+
+        .active {
+            font-family: "myriadBold";
+        }
+
+        li:nth-child(1) {
+            padding-left: 0;
         }
     }
 }

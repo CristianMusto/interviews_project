@@ -19,6 +19,10 @@
         to {transform: scale(1);}
     }
 
+    &.mobile {
+        border-radius: 7.5px;
+    }
+
     &::before {
         content: "";
         position: absolute;

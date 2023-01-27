@@ -17,6 +17,10 @@
     align-items: center;
     flex-direction: column;
 
+    @media (max-width: 768px) {
+        padding: 2rem;
+    }
+
     .scrolldown {
         position: absolute;
         bottom: 1%;

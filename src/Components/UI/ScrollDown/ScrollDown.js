@@ -5,11 +5,18 @@ import { useState, useEffect } from "react";
 const ScrollDown = props => {
 
     const [isDisplayed, setIsDisplayed] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         setInterval(() => {
           setIsDisplayed(true);
         }, 8000);
+
+        if (window.innerWidth <= 768) {
+            setIsMobile(true)
+        } else {
+            setIsMobile(false)
+        }
     }, [])
 
 
@@ -17,7 +24,7 @@ const ScrollDown = props => {
         <>
             {isDisplayed && 
                 <Link 
-                    className={`${styles.scrolldown} ${props.className}`}
+                    className={`${styles.scrolldown} ${props.className} ${isMobile ? styles.mobile : ""}`}
                     to="Whoarewe"
                     activeClass={styles.active}
                     spy={true}

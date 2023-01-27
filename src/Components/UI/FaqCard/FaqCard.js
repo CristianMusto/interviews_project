@@ -14,7 +14,7 @@ const FaqCard = props => {
     }
 
     return (
-        <div className={`${styles.card} ${props.className} ${expand ? styles.expanded : ""}`} onClick={expandCardHandler}>
+        <div className={`${styles.card} ${props.className} ${expand ? styles.expanded : ""} ${props.classNameMobile}`} onClick={expandCardHandler}>
             <div className={styles.align}>
                 <span className={styles.red}></span>
                 <span className={styles.yellow}></span>

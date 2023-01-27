@@ -23,7 +23,6 @@
 
         .title {
             text-align: center;
-
             h2 {
                 margin-bottom: 0.5rem;
                 @include fluid-type(20, 40, 200, 1920);
@@ -45,8 +44,17 @@
             flex-wrap: wrap;
             width: 50%;
             padding-bottom: 1.5rem;
+
+            @media (max-width: 768px) {
+                width: 100%
+            }
+
             .email {
                 flex: 0 0 75%;
+
+                @media (max-width: 768px) {
+                    flex: 0 0 100%;
+                }
             }
 
             .name,
@@ -124,6 +132,11 @@
                 padding-top: 20px;
                 margin-top: 10px;
 
+                @media (max-width: 768px) {
+                    flex: 0 0 100%;
+                    margin-top: 20px;
+                }
+
                 .btn {
                     padding: 0.1em 0.25em;
                     width: 13em;
@@ -133,6 +146,10 @@
                     border-radius: 0.3em;
                     font-size: 12px;
                     cursor: pointer;
+
+                    @media (max-width: 768px) {
+                        width: 100%;
+                    }
 
                     .btnSpan {
                         position: relative;
@@ -150,6 +167,10 @@
                         box-shadow: 0 0.4em 0.1em 0.019em #fff;
                         font-family: "myriad";
                         text-shadow: -5px 5px 5px rgb(0, 0, 0);
+
+                        @media (max-width: 768px) {
+                            width: 100%;
+                        }
 
                         &:hover {
                             transition: all 0.5s;

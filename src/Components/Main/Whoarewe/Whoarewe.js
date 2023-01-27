@@ -23,7 +23,7 @@ const Whoarewe = props => {
                 classNameDotsClose = {styles.close}
                 classNameDotsMin = {styles.min}
                 classNameDotsExpand = {styles.expand}
-                classNameDotsContent = {styles.content}
+                classNameContent = {styles.content}
                 title="Chi siamo?"
                 content="Nulla nulla ex qui et irure ex irure cillum nostrud. Officia Lorem mollit dolor qui ullamco deserunt nulla esse aliqua sit. Ipsum velit magna est magna dolore reprehenderit qui et minim consequat. Eiusmod ex Lorem sit eiusmod. Ex qui cupidatat ea anim sunt Lorem. Aute et enim qui eu enim et nulla sit pariatur anim dolor non enim.
 
@@ -38,7 +38,7 @@ const Whoarewe = props => {
                 classNameDotsClose = {styles.close}
                 classNameDotsMin = {styles.min}
                 classNameDotsExpand = {styles.expand}
-                classNameDotsContent = {styles.content}
+                classNameContent = {styles.content}
                 title="Il nostro docente"
                 content="Nulla nulla ex qui et irure ex irure cillum nostrud. Officia Lorem mollit dolor qui ullamco deserunt nulla esse aliqua sit. Ipsum velit magna est magna dolore reprehenderit qui et minim consequat. Eiusmod ex Lorem sit eiusmod. Ex qui cupidatat ea anim sunt Lorem. Aute et enim qui eu enim et nulla sit pariatur anim dolor non enim.
 
