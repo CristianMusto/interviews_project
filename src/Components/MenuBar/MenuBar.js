@@ -21,16 +21,17 @@ const MenuBar = (props) => {
       };
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setTime(new Date());
-        }, 1000);
-
+        console.log("prima", window.innerWidth);
         if (window.innerWidth <= 768) {
             setIsMobile(true)
         } else {
             setIsMobile(false)
         }
-
+        console.log("dopo", window.innerWidth);
+        
+        const interval = setInterval(() => {
+            setTime(new Date());
+        }, 1000);
         return () => clearInterval(interval);
     }, []);
 
@@ -45,6 +46,8 @@ const MenuBar = (props) => {
             month: 'short',
         });
     }
+
+    console.log(isMobile);
 
     
 
