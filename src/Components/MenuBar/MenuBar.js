@@ -6,6 +6,7 @@ import Logo from "../../Images/Logo.png";
 const MenuBar = (props) => {
     const [time, setTime] = useState(new Date());
     const [isMobile, setIsMobile] = useState(false);
+    const [isTablet, setIsTablet] = useState(false);
     const [isOpen, setIsOpen] = useState();
 
     const menuOpen = () => {
@@ -21,13 +22,17 @@ const MenuBar = (props) => {
       };
 
     useEffect(() => {
-        console.log("prima", window.innerWidth);
         if (window.innerWidth <= 768) {
             setIsMobile(true)
         } else {
             setIsMobile(false)
         }
-        console.log("dopo", window.innerWidth);
+
+        if (window.innerWidth > 768 && window.innerWidth <= 1024) {
+            setIsTablet(true)
+        } else {
+            setIsTablet(false)
+        }
         
         const interval = setInterval(() => {
             setTime(new Date());
@@ -46,14 +51,10 @@ const MenuBar = (props) => {
             month: 'short',
         });
     }
-
-    console.log(isMobile);
-
     
-
     return (
         <>
-            {isMobile 
+            {isMobile || isTablet
                 ? 
                 <>
                     <div className={styles.menubarMobile}>
@@ -80,7 +81,7 @@ const MenuBar = (props) => {
                                 activeClass={styles.active}
                                 spy={true}
                                 smooth={true}
-                                offset={-100}
+                                offset={-150}
                                 onClick={closeMenu}
                                 >Home</Link></li>
                             <li><Link 
@@ -88,7 +89,7 @@ const MenuBar = (props) => {
                                 activeClass={styles.active}
                                 spy={true}
                                 smooth={true}
-                                offset={-100}
+                                offset={-150}
                                 duration={500}
                                 onSetActive={props.onActiveWho}
                                 onSetInactive={props.onInactiveWho}

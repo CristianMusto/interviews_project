@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 const Faq = props => {
 
     const [isMobile, setIsMobile] = useState(false);
+    const [isTablet, setIsTablet] = useState(false);
     const [show, setShow] = useState(false);
 
     const showAllHandler = () => {
@@ -20,6 +21,12 @@ const Faq = props => {
             setIsMobile(true)
         } else {
             setIsMobile(false)
+        }
+
+        if (window.innerWidth > 768 && window.innerWidth <= 1024) {
+            setIsTablet(true)
+        } else {
+            setIsTablet(false)
         }
     }, [])
 
@@ -106,7 +113,7 @@ const Faq = props => {
                 ))
             }
 
-            { isMobile && 
+            { isMobile || isTablet ? 
                 <div className={styles.submitBtn}>
                     <button className={styles.btn} onClick={showAllHandler}>
                         <span className={styles.btnSpan}>
@@ -114,6 +121,8 @@ const Faq = props => {
                         </span>
                     </button>
                 </div>
+                :
+                ""
             }
             <p className={styles.parag}>Se hai altre domande contattaci pure!</p>
         </div>

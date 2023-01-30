@@ -3,9 +3,9 @@
 @import "../../styles/_variables";
 
 .main {
-    height: calc(#{$fullHeight} * 4);
     position: relative;
     top: 0;
+    z-index: 3;
     width: 100%;
 
     .notify {
